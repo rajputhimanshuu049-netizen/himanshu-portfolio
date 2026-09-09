@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Himanshu | Developer Portfolio</title>
+<meta name="description" content="Himanshu — CSEIML student, developer and AI/ML learner.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:#030712;color:#f5f7ff;line-height:1.55}
+:root{--p:#8b5cf6;--p2:#c084fc;--c:#22d3ee;--muted:#a8b2c9;--line:#17274a;--card:#071127}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 70% 10%,#6d28d933,transparent 30%),radial-gradient(circle at 10% 65%,#0891b233,transparent 25%)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.2;background-image:linear-gradient(#4c679222 1px,transparent 1px),linear-gradient(90deg,#4c679222 1px,transparent 1px);background-size:55px 55px}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;left:0;right:0;height:68px;z-index:99;background:#030712e8;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{max-width:1150px;height:100%;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:21px;font-weight:900}.logo b{color:var(--p)}
+.menu{display:flex;gap:25px;font-size:14px;color:#dce3f3}.menu a:hover{color:#c4b5fd}
+.topSocial{display:flex;gap:9px}.topSocial a{width:32px;height:32px;border:1px solid #263963;border-radius:9px;display:grid;place-items:center}
+section{max-width:1150px;margin:auto;padding:90px 20px;border-top:1px solid #14213d}
+.hero{min-height:100vh;border:0;padding-top:115px;display:grid;grid-template-columns:1fr .95fr;align-items:center;gap:35px}
+.badge{display:inline-block;border:1px solid #5a42ad;background:#120d29;border-radius:99px;padding:7px 14px;color:#d9ccff;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(44px,6vw,74px);line-height:1.02;letter-spacing:-3px}.grad{background:linear-gradient(90deg,#fff,#b184ff,#4de5ff);-webkit-background-clip:text;color:transparent}
+.hero p{font-size:17px;color:var(--muted);max-width:600px;margin:22px 0 27px}.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border:1px solid #38548c;background:#08142c;border-radius:12px;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-3px)}
+.primary{background:linear-gradient(135deg,#8b5cf6,#4f46e5);border-color:#b49aff;box-shadow:0 0 35px #7c3aed55}
+.socialRow{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.socialRow a{border:1px solid #2a416d;border-radius:10px;padding:8px 12px;color:#dce5f7}
+.photoArea{position:relative;display:grid;place-items:center}.photoArea:before{content:"";position:absolute;width:420px;height:420px;border:1px solid #8b5cf677;border-radius:50%;box-shadow:0 0 110px #7c3aed44,inset 0 0 80px #2563eb22}
+.mainPhoto{width:min(410px,84vw);height:510px;object-fit:cover;object-position:center top;border-radius:34px 34px 20px 20px;border:2px solid var(--p);position:relative;box-shadow:0 0 75px #7c3aed66}
+.code{position:absolute;right:-15px;top:48px;background:#050a17ee;border:1px solid #7c3aed99;border-radius:14px;padding:13px;color:#c4b5fd;font:12px ui-monospace,monospace;line-height:1.7}
+.call{position:absolute;left:-10px;bottom:28px;background:#061721f2;border:1px solid #22d3eeaa;color:#8ff5ff;padding:10px 14px;border-radius:12px;font-weight:800}
+.label{color:#a78bfa;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.title{font-size:39px;margin:4px 0 34px}
+.about{display:grid;grid-template-columns:330px 1fr;gap:45px;align-items:center}.about img{width:100%;border-radius:23px;border:1px solid #7456c4}.muted{color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.chip{border:1px solid #2d4776;background:#07142d;padding:6px 10px;border-radius:99px;font-size:12px}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.skill{padding:20px;text-align:center}.skill .ico{font-size:30px}.skill h3{margin:6px 0}.level{font-size:11px;color:#aab5ca}
+.projects{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.project{min-height:205px}.projectIcon{font-size:30px}.project h3{margin:10px 0 5px}.project p{font-size:13px;color:var(--muted)}.tag{display:inline-block;margin-top:13px;margin-right:4px;border:1px solid #36558b;border-radius:7px;padding:3px 7px;font-size:10px}
+.bottom{display:grid;grid-template-columns:1fr 1.25fr 1fr;border:1px solid var(--line);border-radius:18px;overflow:hidden}.bottom>div{padding:24px;border-right:1px solid var(--line)}.bottom>div:last-child{border:0}
+.check{margin:8px 0;color:#dce5f5}.check i{color:#a78bfa;font-style:normal;margin-right:7px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #29436e;border-radius:13px;overflow:hidden;margin-top:18px}.stat{text-align:center;padding:18px;border-right:1px solid #29436e}.stat:last-child{border:0}.stat strong{display:block;color:#a78bfa;font-size:28px}.stat small{color:var(--muted)}
+footer{text-align:center;padding:28px 20px;border-top:1px solid var(--line);color:#7f8ba6;font-size:13px}
+@media(max-width:850px){.menu{display:none}.topSocial{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:105px}.hero p{margin-left:auto;margin-right:auto}.buttons,.socialRow{justify-content:center}.photoArea{order:-1}.mainPhoto{width:280px;height:350px}.photoArea:before{width:300px;height:300px}.code{display:none}.call{left:50%;transform:translateX(-50%);white-space:nowrap}.about{grid-template-columns:1fr}.about img{max-width:280px;margin:auto}.skills{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr 1fr}.bottom{grid-template-columns:1fr}.bottom>div{border-right:0;border-bottom:1px solid var(--line)}.bottom>div:last-child{border-bottom:0}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #29436e}}
+@media(max-width:500px){.skills,.projects{grid-template-columns:1fr}h1{letter-spacing:-2px}.title{font-size:32px}}
+</style>
+</head>
+<body>
+<nav><div class="nav">
+<div class="logo"><b>&lt;/&gt;</b> HIMANSHU</div>
+<div class="menu"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#goals">Goals</a><a href="#contact">Contact</a></div>
+<div class="topSocial"><a href="https://www.instagram.com/itz_prime_happy" target="_blank">◎</a><a href="tel:+919204770065">☎</a></div>
+</div></nav>
+
+<section class="hero" id="home">
+<div><span class="badge">👋 Hi, I'm Himanshu</span>
+<h1>Full Stack Developer<br>& <span class="grad">AI Enthusiast</span></h1>
+<p>I'm a passionate CSEIML student exploring programming, AI/ML and building cool projects. Dreaming big, learning daily, and working towards becoming a better version of myself.</p>
+<div class="buttons"><a class="btn primary" href="#projects">View My Projects →</a><a class="btn" href="#contact">Contact Me</a></div>
+<div class="socialRow"><a href="https://www.instagram.com/itz_prime_happy" target="_blank">📷 Instagram</a><a href="tel:+919204770065">📞 Call Me</a><a href="https://wa.me/919204770065" target="_blank">💬 WhatsApp</a></div>
+</div>
+<div class="photoArea"><img class="mainPhoto" src="himanshu.jpg" alt="Himanshu"><div class="code">const dreams = {<br>"tech": true,<br>"AI": true,<br>"good_job": true,<br>"keep_learning": true<br>};</div><div class="call">📞 9204770065</div></div>
+</section>
+
+<section id="about"><div class="label">01 — About Me</div><h2 class="title">Who Am <span class="grad">I?</span></h2>
+<div class="about"><img src="himanshu.jpg" alt="Himanshu profile"><div><h3 style="font-size:27px;margin-bottom:10px">Hey, I'm Himanshu 👨‍💻</h3><p class="muted">I'm a CSEIML student from India interested in programming, AI/ML, gaming and technology. I want to learn consistently, build real projects and become a skilled developer.</p><div class="chips"><span class="chip">CSEIML • BTech</span><span class="chip">AI / ML</span><span class="chip">Coding</span><span class="chip">Gaming</span><span class="chip">Learning</span></div></div></div></section>
+
+<section id="skills"><div class="label">02 — My Skills</div><h2 class="title">Tech Stack & <span class="grad">Tools</span></h2>
+<div class="skills">
+<div class="card skill"><div class="ico">C</div><h3>C</h3><div class="level">Learning</div></div>
+<div class="card skill"><div class="ico">C++</div><h3>C++</h3><div class="level">Learning</div></div>
+<div class="card skill"><div class="ico">🐍</div><h3>Python</h3><div class="level">Learning</div></div>
+<div class="card skill"><div class="ico">☕</div><h3>Java</h3><div class="level">Learning</div></div>
+<div class="card skill"><div class="ico">🌐</div><h3>HTML</h3><div class="level">Basic</div></div>
+<div class="card skill"><div class="ico">🎨</div><h3>CSS</h3><div class="level">Basic</div></div>
+<div class="card skill"><div class="ico">JS</div><h3>JavaScript</h3><div class="level">Basic</div></div>
+<div class="card skill"><div class="ico">🗄️</div><h3>MySQL</h3><div class="level">Basic</div></div>
+</div></section>
+
+<section id="projects"><div class="label">03 — My Projects</div><h2 class="title">Things I've <span class="grad">Built</span></h2>
+<div class="projects">
+<div class="card project"><div class="projectIcon">🌐</div><h3>Personal Portfolio</h3><p>Modern personal portfolio website built with HTML and CSS.</p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+<div class="card project"><div class="projectIcon">🤖</div><h3>AI Chatbot</h3><p>A future project to explore Python, APIs and AI/ML.</p><span class="tag">Python</span><span class="tag">ML</span><span class="tag">AI</span></div>
+<div class="card project"><div class="projectIcon">🎮</div><h3>Game Project</h3><p>Experimenting with game ideas and interactive experiences.</p><span class="tag">Python</span><span class="tag">JS</span><span class="tag">Game</span></div>
+<div class="card project"><div class="projectIcon">📱</div><h3>Mobile App</h3><p>A mobile app idea I want to build in the future.</p><span class="tag">Flutter</span><span class="tag">Dart</span></div>
+</div></section>
+
+<section id="goals"><div class="bottom">
+<div><div class="label">My Goals</div><h3 style="margin:8px 0 12px">Future Plan 🚀</h3><div class="check"><i>✓</i>Complete BTech in CSEIML</div><div class="check"><i>✓</i>Become an AI/ML expert</div><div class="check"><i>✓</i>Build real projects</div><div class="check"><i>✓</i>Get a good job</div><div class="check"><i>✓</i>Travel the world</div></div>
+<div><div class="label">Quick Stats</div><div class="stats"><div class="stat"><strong>17</strong><small>Years</small></div><div class="stat"><strong>1+</strong><small>Projects</small></div><div class="stat"><strong>100%</strong><small>Dedication</small></div><div class="stat"><strong>∞</strong><small>Dreams</small></div></div></div>
+<div id="contact"><div class="label">Get In Touch</div><h3 style="margin:8px 0">Let's connect!</h3><p class="muted">📷 <a href="https://www.instagram.com/itz_prime_happy" target="_blank">@itz_prime_happy</a></p><p class="muted">📞 <a href="tel:+919204770065">9204770065</a></p><p class="muted">💬 <a href="https://wa.me/919204770065" target="_blank">WhatsApp</a></p><div style="margin-top:16px"><a class="btn primary" href="mailto:rajputhimanshuu049@gmail.com">Send Message →</a></div></div>
+</div></section>
+
+<footer>© 2026 Himanshu • Built with ❤️ and lots of dreams.<br>Keep Learning &nbsp;|&nbsp; Keep Growing &nbsp;|&nbsp; Never Give Up 🚀</footer>
+</body></html>
